@@ -1,0 +1,25 @@
+{
+  "name": "kalkulator-gaji-karyawan",
+  "version": "1.0.0",
+  "description": "Aplikasi Kalkulator Gaji Karyawan & Hitung Lembur (GajiPro)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node -e \"const fs=require('fs'); fs.copyFileSync('index.html', 'www/index.html'); fs.copyFileSync('manifest.json', 'www/manifest.json'); fs.copyFileSync('sw.js', 'www/sw.js'); fs.cpSync('icons', 'www/icons', {recursive: true});\" && npx cap copy android",
+    "sync": "npm run build && npx cap sync android"
+  },
+  "keywords": [
+    "kalkulator-gaji",
+    "payroll",
+    "android",
+    "pwa",
+    "capacitor"
+  ],
+  "author": "fajarcreative",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^7.0.1",
+    "@capacitor/cli": "^7.0.1",
+    "@capacitor/core": "^7.0.1"
+  }
+}

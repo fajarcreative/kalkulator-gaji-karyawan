@@ -1,0 +1,6 @@
+{
+  "appId": "com.fajarcreative.gajipro",
+  "appName": "GajiPro",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

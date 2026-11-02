@@ -1,0 +1,444 @@
+<!DOCTYPE html><html lang="id" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "outline": "#757682", "on-primary": "#ffffff", "on-tertiary-fixed": "#00174b", "surface-container-highest": "#d3e4fe", "on-primary-container": "#90a8ff", "primary-container": "#1e3a8a", "tertiary-fixed": "#dbe1ff", "secondary-container": "#82f5c1", "on-surface": "#0b1c30", "surface-container-lowest": "#ffffff", "outline-variant": "#c5c5d3", "on-primary-fixed": "#00164e", "on-background": "#0b1c30", "primary": "#00236f", "inverse-on-surface": "#eaf1ff", "surface-dim": "#cbdbf5", "tertiary": "#00246b", "surface-container-high": "#dce9ff", "on-secondary-container": "#00714e", "error-container": "#ffdad6", "inverse-surface": "#213145", "inverse-primary": "#b6c4ff", "on-secondary-fixed-variant": "#005137", "surface": "#f8f9ff", "on-surface-variant": "#444651", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "primary-fixed-dim": "#b6c4ff", "error": "#ba1a1a", "tertiary-container": "#00389a", "primary-fixed": "#dce1ff", "surface-variant": "#d3e4fe", "secondary": "#006c4a", "secondary-fixed-dim": "#68dba9", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#003ea8", "surface-tint": "#4059aa", "on-secondary": "#ffffff", "on-error-container": "#93000a", "on-secondary-fixed": "#002114", "tertiary-fixed-dim": "#b4c5ff", "on-tertiary-container": "#8da9ff", "surface-container-low": "#eff4ff", "on-primary-fixed-variant": "#264191", "background": "#f8f9ff", "secondary-fixed": "#85f8c4" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "margin": "1rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "gutter-sm": "0.75rem", "margin-desktop": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, fontFamily: { "body-md": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "currency-body": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "currency-display": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"] }, fontSize: { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "currency-body": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "currency-display": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[24px]">calculate</span></div><div class="flex flex-col justify-center"><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Kalkulator Gaji</h1><span class="font-label-sm text-label-sm text-on-surface-variant">Hitung Gaji Pokok &amp; Lembur</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-lg gap-space-md">
+<!-- Summary Result Card -->
+<div class="relative overflow-hidden rounded-xl bg-primary text-on-primary p-space-md shadow-md flex flex-col gap-space-sm mt-space-sm">
+<div class="absolute -right-8 -bottom-8 w-36 h-36 rounded-full bg-primary-container/40 blur-2xl pointer-events-none"></div>
+<div class="absolute top-0 right-0 p-space-sm opacity-15">
+<span class="material-symbols-outlined text-[72px]">payments</span>
+</div>
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">account_balance_wallet</span>
+<span class="font-label-sm text-label-sm text-surface-container-high tracking-wider uppercase">Estimasi Total Diterima</span>
+</div>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-surface-container/20 text-surface-bright font-label-sm text-label-sm">
+        Resmi • PP 35/2021
+      </span>
+</div>
+<div class="z-10 flex flex-col my-space-xs">
+<span class="font-label-sm text-label-sm text-surface-container-high">Take-Home Pay Bersih</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-display text-headline-xl-mobile font-bold tracking-tight text-surface-bright" id="display-total-gaji">Rp 6.600.000</span>
+</div>
+</div>
+<div class="z-10 pt-space-xs flex items-center justify-between border-t border-surface-container-highest/20 text-surface-container-low font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">functions</span>
+        Gaji Pokok + Uang Lembur
+      </span>
+<span class="font-label-sm text-label-sm text-secondary-fixed bg-secondary/30 px-space-xs py-0.5 rounded" id="display-formula-badge">Gol. A + 2 Jam (32%)</span>
+</div>
+</div>
+<!-- Selection: Golongan Karyawan -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="w-2 h-4 rounded bg-primary inline-block"></span>
+        Golongan Karyawan
+      </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pilih Grade</span>
+</div>
+<div class="grid grid-cols-3 gap-gutter-sm" id="grade-selector-container">
+<!-- Golongan A -->
+<button aria-pressed="true" class="grade-card group relative p-space-sm rounded-xl text-left transition-all duration-150 flex flex-col justify-between h-24 bg-primary-container text-on-primary shadow-sm" data-grade="A" data-salary="5000000" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-headline-sm text-headline-sm font-bold">Gol. A</span>
+<span class="grade-check w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm opacity-80">Staff Junior</span>
+<span class="font-label-lg text-label-lg font-semibold tracking-tight">Rp 5.000.000</span>
+</div>
+</button>
+<!-- Golongan B -->
+<button aria-pressed="false" class="grade-card group relative p-space-sm rounded-xl text-left transition-all duration-150 flex flex-col justify-between h-24 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-grade="B" data-salary="6500000" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-headline-sm text-headline-sm font-bold">Gol. B</span>
+<span class="grade-check hidden w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Staff Senior</span>
+<span class="font-label-lg text-label-lg font-semibold tracking-tight text-on-surface">Rp 6.500.000</span>
+</div>
+</button>
+<!-- Golongan C -->
+<button aria-pressed="false" class="grade-card group relative p-space-sm rounded-xl text-left transition-all duration-150 flex flex-col justify-between h-24 bg-surface-container-lowest text-on-surface hover:bg-surface-container" data-grade="C" data-salary="9500000" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-headline-sm text-headline-sm font-bold">Gol. C</span>
+<span class="grade-check hidden w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Supervisor</span>
+<span class="font-label-lg text-label-lg font-semibold tracking-tight text-on-surface">Rp 9.500.000</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Input: Durasi Lembur -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">more_time</span>
+          Durasi Lembur
+        </label>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Perhitungan flat hari kerja aktif</span>
+</div>
+<div class="px-space-xs py-1 rounded-lg bg-surface-container-high text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1" id="badge-overtime-rate"><span class="material-symbols-outlined text-[14px]">bolt</span><span class="">Rate: 32% (2 Jam)</span></div>
+</div>
+<!-- Stepper Control -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl p-space-xs">
+<button aria-label="Kurangi lembur" class="w-12 h-12 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high active:scale-95 transition flex items-center justify-center shadow-sm" id="btn-overtime-minus" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="flex flex-col items-center justify-center">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-on-surface leading-none" id="display-stepper-hours">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Jam Kerja Lembur</span>
+</div>
+<button aria-label="Tambah lembur" class="w-12 h-12 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high active:scale-95 transition flex items-center justify-center shadow-sm" id="btn-overtime-plus" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Quick Tap Chips -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pintas Cepat:</span>
+<div class="grid grid-cols-6 gap-1" id="quick-overtime-chips">
+<button class="chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition" data-hours="0" type="button">0 Jam</button>
+<button class="chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition" data-hours="1" type="button">1 Jam</button>
+<button class="chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition" data-hours="2" type="button">2 Jam</button>
+<button class="chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition" data-hours="3" type="button">3 Jam</button>
+<button class="chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition" data-hours="4" type="button">4 Jam</button>
+<button class="chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition" data-hours="5" type="button">5+ Jam</button>
+</div>
+</div>
+</div>
+<!-- Detailed Breakdown Card -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">receipt</span>
+        Rincian Slip Gaji
+      </span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container px-space-xs py-0.5 rounded-full font-semibold">Tervalidasi</span>
+</div>
+<div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<div class="flex justify-between items-center py-1">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Gaji Pokok (<span id="summary-grade-label" class="">Golongan A</span>)
+        </span>
+<span class="font-currency-body text-currency-body text-on-surface font-semibold" id="summary-base-salary">Rp 5.000.000</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+          Durasi Kerja Lembur
+        </span>
+<span class="font-label-lg text-label-lg text-on-surface" id="summary-overtime-duration">2 Jam</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Persentase Lembur
+        </span>
+<span class="font-label-lg text-label-lg text-secondary font-bold" id="summary-overtime-rate">32%</span>
+</div>
+<div class="flex justify-between items-center py-1 bg-surface-container-low p-space-xs rounded-lg">
+<span class="text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">add_circle</span>
+          Kompensasi Uang Lembur
+        </span>
+<span class="font-currency-body text-currency-body text-secondary font-bold" id="summary-overtime-amount">+ Rp 1.600.000</span>
+</div>
+</div>
+<!-- Total Highlight Band -->
+<div class="mt-space-xs p-space-sm rounded-xl bg-secondary-container/40 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-secondary-container uppercase tracking-wide">Total Diterima</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sebelum potongan pajak &amp; BPJS</span>
+</div>
+<span class="font-headline-md text-headline-md text-secondary font-bold tracking-tight" id="summary-total-takehome">Rp 6.600.000</span>
+</div>
+</div>
+<!-- Collapsible Transparency Rules Card -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all">
+<button class="w-full p-space-md flex items-center justify-between text-left text-on-surface hover:bg-surface-container transition" id="btn-toggle-rules" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg">Ketentuan &amp; Tarif Lembur</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acuan Perhitungan Gaji Pokok</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-rules-chevron">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md" id="content-rules-table">
+<div class="rounded-lg bg-surface-container-lowest p-space-sm flex flex-col gap-space-xs text-body-sm font-body-sm">
+<div class="grid grid-cols-2 pb-1 border-b border-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Durasi Jam Lembur</span>
+<span class="text-right">Persentase Pengali</span>
+</div>
+<div class="grid grid-cols-2 py-0.5 text-on-surface">
+<span class="">0 Jam</span>
+<span class="text-right font-medium">0% (Rp 0)</span>
+</div>
+<div class="grid grid-cols-2 py-0.5 text-on-surface">
+<span class="">1 Jam</span>
+<span class="text-right font-medium">30% dari Pokok</span>
+</div>
+<div class="grid grid-cols-2 py-0.5 text-on-surface">
+<span class="">2 Jam</span>
+<span class="text-right font-medium">32% dari Pokok</span>
+</div>
+<div class="grid grid-cols-2 py-0.5 text-on-surface">
+<span class="">3 Jam</span>
+<span class="text-right font-medium">34% dari Pokok</span>
+</div>
+<div class="grid grid-cols-2 py-0.5 text-on-surface">
+<span class="">4 Jam</span>
+<span class="text-right font-medium">36% dari Pokok</span>
+</div>
+<div class="grid grid-cols-2 py-0.5 text-on-surface">
+<span class="">≥ 5 Jam (Maksimal)</span>
+<span class="text-right font-medium">38% dari Pokok</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+        Formula resmi disesuaikan untuk standar upah lembur operasional terstruktur.
+      </p>
+</div>
+</div>
+<!-- Primary Bottom Actions -->
+<div class="flex gap-gutter-sm items-center pt-space-xs">
+<button class="flex-1 h-12 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg active:scale-95 transition flex items-center justify-center gap-1.5" id="btn-reset" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+      Hitung Ulang
+    </button>
+<button class="flex-[2] h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg active:scale-95 transition flex items-center justify-center gap-1.5 shadow-sm" id="btn-copy-slip" type="button">
+<span class="material-symbols-outlined text-[18px]" id="copy-icon">content_copy</span>
+<span id="copy-text" class="">Salin Rincian Slip</span>
+</button>
+</div>
+<!-- Copied Toast Micro-Interaction -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-full shadow-lg font-label-md text-label-md flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 z-50" id="toast-notification">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Rincian slip berhasil disalin!</span>
+</div>
+</div>
+<script>
+  (function () {
+    // State
+    const state = {
+      grade: 'A',
+      baseSalary: 5000000,
+      hours: 2
+    };
+
+    const GRADE_SALARIES = {
+      'A': 5000000,
+      'B': 6500000,
+      'C': 9500000
+    };
+
+    function getOvertimeRate(hours) {
+      if (hours <= 0) return 0;
+      if (hours === 1) return 0.30;
+      if (hours === 2) return 0.32;
+      if (hours === 3) return 0.34;
+      if (hours === 4) return 0.36;
+      return 0.38; // >= 5
+    }
+
+    function formatRupiah(value) {
+      return 'Rp ' + Math.round(value).toLocaleString('id-ID');
+    }
+
+    // DOM Elements
+    const displayTotalGaji = document.getElementById('display-total-gaji');
+    const displayFormulaBadge = document.getElementById('display-formula-badge');
+    const displayStepperHours = document.getElementById('display-stepper-hours');
+    const badgeOvertimeRate = document.getElementById('badge-overtime-rate');
+    
+    const summaryGradeLabel = document.getElementById('summary-grade-label');
+    const summaryBaseSalary = document.getElementById('summary-base-salary');
+    const summaryOvertimeDuration = document.getElementById('summary-overtime-duration');
+    const summaryOvertimeRate = document.getElementById('summary-overtime-rate');
+    const summaryOvertimeAmount = document.getElementById('summary-overtime-amount');
+    const summaryTotalTakehome = document.getElementById('summary-total-takehome');
+
+    const gradeCards = document.querySelectorAll('.grade-card');
+    const chipButtons = document.querySelectorAll('.chip-hour');
+    const btnMinus = document.getElementById('btn-overtime-minus');
+    const btnPlus = document.getElementById('btn-overtime-plus');
+    const btnReset = document.getElementById('btn-reset');
+    const btnCopy = document.getElementById('btn-copy-slip');
+    const copyText = document.getElementById('copy-text');
+    const copyIcon = document.getElementById('copy-icon');
+    const toast = document.getElementById('toast-notification');
+
+    const btnToggleRules = document.getElementById('btn-toggle-rules');
+    const contentRulesTable = document.getElementById('content-rules-table');
+    const iconRulesChevron = document.getElementById('icon-rules-chevron');
+
+    function calculateAndRender() {
+      const rate = getOvertimeRate(state.hours);
+      const overtimeAmount = state.baseSalary * rate;
+      const totalSalary = state.baseSalary + overtimeAmount;
+      const ratePercent = Math.round(rate * 100);
+
+      // Hero Card Updates
+      displayTotalGaji.textContent = formatRupiah(totalSalary);
+      displayFormulaBadge.textContent = 'Gol. ' + state.grade + ' + ' + state.hours + ' Jam (' + ratePercent + '%)';
+
+      // Stepper & Rate Tag Updates
+      displayStepperHours.textContent = state.hours;
+      badgeOvertimeRate.innerHTML = '<span class="material-symbols-outlined text-[14px]">bolt</span><span>Rate: ' + ratePercent + '% (' + state.hours + ' Jam)</span>';
+
+      // Itemized Breakdown Updates
+      summaryGradeLabel.textContent = 'Golongan ' + state.grade;
+      summaryBaseSalary.textContent = formatRupiah(state.baseSalary);
+      summaryOvertimeDuration.textContent = state.hours + ' Jam';
+      summaryOvertimeRate.textContent = ratePercent + '%';
+      summaryOvertimeAmount.textContent = '+ ' + formatRupiah(overtimeAmount);
+      summaryTotalTakehome.textContent = formatRupiah(totalSalary);
+
+      // Update Grade Card Visuals
+      gradeCards.forEach(card => {
+        const cardGrade = card.getAttribute('data-grade');
+        const checkIcon = card.querySelector('.grade-check');
+        const labelText = card.querySelector('div:last-child span:last-child');
+        
+        if (cardGrade === state.grade) {
+          card.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          card.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          if (checkIcon) checkIcon.classList.remove('hidden');
+          if (labelText) labelText.classList.remove('text-on-surface');
+        } else {
+          card.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          card.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          if (checkIcon) checkIcon.classList.add('hidden');
+          if (labelText) labelText.classList.add('text-on-surface');
+        }
+      });
+
+      // Update Quick Chips Visuals
+      chipButtons.forEach(chip => {
+        const chipHours = parseInt(chip.getAttribute('data-hours'), 10);
+        const isActive = (chipHours === 5 && state.hours >= 5) || (chipHours === state.hours);
+        
+        if (isActive) {
+          chip.className = 'chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-primary text-on-primary font-bold shadow-sm transition';
+        } else {
+          chip.className = 'chip-hour py-1.5 rounded-lg text-center font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container transition';
+        }
+      });
+    }
+
+    // Grade Card Handlers
+    gradeCards.forEach(card => {
+      card.addEventListener('click', function () {
+        const selectedGrade = this.getAttribute('data-grade');
+        state.grade = selectedGrade;
+        state.baseSalary = GRADE_SALARIES[selectedGrade];
+        calculateAndRender();
+      });
+    });
+
+    // Overtime Stepper Handlers
+    btnMinus.addEventListener('click', function () {
+      if (state.hours > 0) {
+        state.hours -= 1;
+        calculateAndRender();
+      }
+    });
+
+    btnPlus.addEventListener('click', function () {
+      if (state.hours < 24) {
+        state.hours += 1;
+        calculateAndRender();
+      }
+    });
+
+    // Quick Tap Chips
+    chipButtons.forEach(chip => {
+      chip.addEventListener('click', function () {
+        state.hours = parseInt(this.getAttribute('data-hours'), 10);
+        calculateAndRender();
+      });
+    });
+
+    // Collapsible Rules Toggle
+    btnToggleRules.addEventListener('click', function () {
+      const isHidden = contentRulesTable.classList.contains('hidden');
+      if (isHidden) {
+        contentRulesTable.classList.remove('hidden');
+        iconRulesChevron.style.transform = 'rotate(180deg)';
+      } else {
+        contentRulesTable.classList.add('hidden');
+        iconRulesChevron.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Reset Handler
+    btnReset.addEventListener('click', function () {
+      state.grade = 'A';
+      state.baseSalary = GRADE_SALARIES['A'];
+      state.hours = 0;
+      calculateAndRender();
+    });
+
+    // Copy Details Handler
+    btnCopy.addEventListener('click', function () {
+      const rate = getOvertimeRate(state.hours);
+      const overtimeAmount = state.baseSalary * rate;
+      const total = state.baseSalary + overtimeAmount;
+
+      const summaryText = 
+`--- RINCIAN SLIP GAJI KARYAWAN ---
+Golongan: Golongan ${state.grade}
+Gaji Pokok: ${formatRupiah(state.baseSalary)}
+Durasi Lembur: ${state.hours} Jam (${Math.round(rate * 100)}%)
+Uang Lembur: ${formatRupiah(overtimeAmount)}
+----------------------------------
+Total Diterima: ${formatRupiah(total)}
+Status: Perhitungan Valid (Kompensasi Kerja)`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(summaryText).then(showToast);
+      } else {
+        showToast();
+      }
+    });
+
+    function showToast() {
+      copyIcon.textContent = 'check';
+      copyText.textContent = 'Tersalin!';
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+        toast.classList.remove('opacity-100');
+        copyIcon.textContent = 'content_copy';
+        copyText.textContent = 'Salin Rincian Slip';
+      }, 2400);
+    }
+
+    // Initial render
+    calculateAndRender();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/80 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,23,42,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex items-center h-16 px-space-xs justify-center"><a aria-current="page" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-primary font-label-md" data-path="kalkulator-gaji" href="#"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-sm text-label-sm font-semibold">Kalkulator Gaji</span></a></div></nav>
+
+</body></html>
